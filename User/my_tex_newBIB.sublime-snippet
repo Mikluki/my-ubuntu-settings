@@ -1,0 +1,120 @@
+<snippet>
+    <content><![CDATA[
+\documentclass{article}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[a4paper]{geometry}
+% \linespread{1}
+\usepackage{enumitem} % itemize linespread
+
+\usepackage[backend=biber,
+  maxcitenames=1,maxbibnames=2,
+  giveninits=true]{biblatex}
+
+\newcommand*{\mktexttiny}[1]{{\normalsize #1}}
+% the definition should of course be {{\tiny #1}},
+% but \normalsize is easier to read in the MWE
+
+\DeclareCiteCommand{\cfootcitenew}[\mktexttiny]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cfootcitenew}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\newbibmacro*{cfootcitenew}{%
+  \printnames{labelname}%
+  \setunit{\addcomma\space}%
+  \ifentrytype{article}
+    {\printfield{journaltitle}%
+     \setunit{\addspace}%
+     \printfield{volume}%
+     \setunit{\addcomma\space}%
+     \printfield{pages}}
+    {\printfield{labeltitle}}%
+  \setunit{\addspace}%
+  \DeclareFieldFormat{date}{\mkbibparens{##1}}%
+  \printdate
+}
+
+\DeclareFieldFormat[article,periodical]{volume}{\mkbibbold{#1}}
+\DeclareFieldFormat{pages}{#1}
+
+
+% ========================================================
+\begin{filecontents}[force]{\jobname.bib}
+
+@article{chen2016two,
+  title={Two-dimensional non-carbonaceous materials-enabled efficient photothermal cancer therapy},
+  author={Chen, Yu and Wang, Lianzhou and Shi, Jianlin},
+  journal={Nano Today},
+  volume={11},
+  number={3},
+  pages={292--308},
+  year={2016},
+  publisher={Elsevier}
+},
+@article{sup2013controlled,
+  title={Controlled charge trapping by molybdenum disulphide and graphene in ultrathin heterostructured memory devices},
+  author={Sup Choi, Min and Lee, Gwan-Hyoung and Yu, Young-Jun and Lee, Dae-Yeong and Hwan Lee, Seung and Kim, Philip and Hone, James and Jong Yoo, Won},
+  journal={Nature communications},
+  volume={4},
+  number={1},
+  pages={1--7},
+  year={2013},
+  publisher={Nature Publishing Group}
+},
+@article{tsai2014monolayer,
+  title={Monolayer MoS2 heterojunction solar cells},
+  author={Tsai, Meng-Lin and Su, Sheng-Han and Chang, Jan-Kai and Tsai, Dung-Sheng and Chen, Chang-Hsiao and Wu, Chih-I and Li, Lain-Jong and Chen, Lih-Juann and He, Jr-Hau},
+  journal={ACS nano},
+  volume={8},
+  number={8},
+  pages={8317--8322},
+  year={2014},
+  publisher={ACS Publications}
+},
+
+@article{lakowicz1999principles,
+  title={Principles of fluorescence spectroscopy Kluwer},
+  author={Lakowicz, Joseph R},
+  journal={New York},
+  volume={23},
+  pages={p.10},
+  year={1999}
+},
+@article{varrla2015large,
+  title={Large-scale production of size-controlled MoS2 nanosheets by shear exfoliation},
+  author={Varrla, Eswaraiah and Backes, Claudia and Paton, Keith R and Harvey, Andrew and Gholamvand, Zahra and McCauley, Joe and Coleman, Jonathan N},
+  journal={Chemistry of Materials},
+  volume={27},
+  number={3},
+  pages={1129--1139},
+  year={2015},
+  publisher={ACS Publications}
+},
+% ========================================================
+\end{filecontents}
+\addbibresource{\jobname.bib}
+
+\begin{document}
+{\huge\textbf{References}}
+\begin{itemize}[noitemsep]
+  \item \cfootcitenew{chen2016two}
+  \item \cfootcitenew{sup2013controlled}
+  \item \cfootcitenew{tsai2014monolayer}
+  \item \cfootcitenew{lakowicz1999principles}
+  \item \cfootcitenew{varrla2015large}
+\end{itemize}
+
+
+\end{document}
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>newtexBIBonly</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,51 @@
+[global_config]
+  title_hide_sizetext = True
+  title_transmit_fg_color = "#dfdfdf"
+  title_transmit_bg_color = "#222d32"
+  title_receive_bg_color = "#a6accd"
+  title_inactive_fg_color = "#5f696f"
+  title_inactive_bg_color = "#3b4252"
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  suppress_multiple_term_dialog = True
+  always_split_with_profile = True
+[keybindings]
+  split_horiz = <Alt>3
+  split_vert = <Alt>2
+  close_term = <Primary>q
+  copy = <Primary><Shift>c
+  paste = <Primary>v
+  close_window = <Primary><Shift>q
+  edit_window_title = <Primary><Alt>e
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+  [[custom]]
+    cursor_shape = ibeam
+    cursor_color = "#ffcc00"
+    cursor_color_fg = False
+    font = Monospace 15
+    foreground_color = "#a6accd"
+    scrollbar_position = left
+    palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
+    use_system_font = False
+    copy_on_selection = True
+  [[Material-Palenight]]
+    background_color = "#3b4252"
+    background_darkness = 0.85
+    cursor_shape = ibeam
+    cursor_color = "#ffa348"
+    cursor_color_fg = False
+    font = Monospace 15
+    foreground_color = "#d5dae3"
+    palette = "#292d3e:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#abb2bf:#959dcb:#f07178:#c3e88d:#f78c6c:#729fcf:#ffcb6b:#676e95:#eeeeec"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = Material-Palenight
+[plugins]

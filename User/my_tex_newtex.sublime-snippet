@@ -1,0 +1,60 @@
+<snippet>
+	<content><![CDATA[
+\documentclass[oneside, final, 12pt]{extreport}	%класс документа
+\usepackage{mathtext}	%русские буквы в фомулах
+\usepackage[T2A]{fontenc} % божественная кодировка (русский в формулах)
+\usepackage[TS1]{fontenc} % божественная кодировка 2 (русский в формулах)
+\usepackage[utf8]{inputenc}	%выбор кодировки
+\usepackage[english, russian]{babel}	%русский язык
+\usepackage{vmargin}	%размеры страницы
+\setpapersize{A4}	%формат страницы
+\setmarginsrb{2cm}{1.5cm}{1cm}{1.5cm}{0pt}{0mm}{0pt}{13mm}	%установка размеров
+\usepackage{indentfirst}	%красная строка
+\usepackage{amsmath}	%математические формулы
+\usepackage{amssymb} %математические символы
+\usepackage{multirow}	%объединение строк в таблице
+\usepackage{graphicx}	%рисунки
+\usepackage{textcomp}	%типографские знаки
+\graphicspath{{pics/}}	%путь к рисункам
+\usepackage{wrapfig}	%обтекаемые рисунки
+\usepackage{mathrsfs}	%символы
+\usepackage{fancyhdr}   %колонтитулы
+\usepackage{colortbl}	%цветные таблицы
+\usepackage{float}
+\usepackage{cancel} %перечеркнутый текст
+
+%% Links
+\usepackage{url}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{flushright}
+	\textit{${1:Лукьянов Михаил}}\\\\
+
+\end{flushright}
+
+\begin{center}
+	\subsection*{${3:Лабораторная работа №}}
+	\Large \bfseries ${4:Длинное название лабы}\\\\
+	Ответы на вопросы
+\end{center}
+
+\begin{enumerate}
+
+	\item ${5:Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod}
+
+	\item ${6:Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam}
+
+
+
+\end{enumerate}
+
+\end{document}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>newtex</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

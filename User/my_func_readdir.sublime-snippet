@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[
+def read_data_type(name):
+	ox, oy = [], []
+	temp = []
+	directory = os.getcwd()
+	
+	numbers = re.compile(r'(\d+)')
+	def numericalSort(value):
+		parts = numbers.split(value)
+		parts[1::2] = map(int, parts[1::2])
+		return parts
+
+	for in_file in sorted(glob.glob(directory+'/*.asc'), key=numericalSort):
+		print(in_file)
+		if name in in_file:
+			ox_i = []
+			oy_i = []
+
+			with open(in_file, 'r') as f:
+				data = f.readlines()
+
+			for i in range(len(data)):
+				line = data[i].split(sep='\t')
+				if data[i] == '\n':
+					break
+				ox_i.append(float(line[0]))
+				oy_i.append(float(line[1]))
+			ox.append(ox_i)
+			oy.append(oy_i)
+
+			data2 = in_file.split(sep='_')[-1][:-4]
+			temp.append(int(data2))
+	return ox, oy, temp
+	
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>readsortdir</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

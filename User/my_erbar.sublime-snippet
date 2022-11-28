@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+ax.errorbar(${1:ox}, ${2:oy}, yerr = ${3:bar}, lw = 2, 
+                capsize = 4, capthick = 4,  
+                color = "green") 
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>plterbar</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

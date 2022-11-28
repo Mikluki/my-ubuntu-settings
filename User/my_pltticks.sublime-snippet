@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+lim = ax.get_xlim()
+# print(lim)
+ax.set_xticks(list(ax.get_xticks()) + [min(lim)] + [max(lim)])
+ax.set_xlim(lim)
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pltticks</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

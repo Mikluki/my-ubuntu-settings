@@ -1,0 +1,64 @@
+<snippet>
+	<content><![CDATA[
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+import glob, os
+import re
+
+def read_f(name):
+  ox, oy = [], []
+  with open(name) as f:
+    data = f.readlines()
+    # print(data)
+
+  for i in range(len(data)):
+    line = data[i].split()
+    ox.append(float(line[0]))
+    oy.append(float(line[1]))
+
+  return ox,oy
+
+ox, oy = read_f('$1')
+print(ox,'\n',oy)
+fig, ax = plt.subplots(figsize=(12,11))
+ax.set_title('$4', pad=20, fontsize=25, loc='center')
+ax.set_xlabel('$2',  labelpad=5, fontsize=25)
+ax.set_ylabel('$3', labelpad=5, fontsize=25)
+# ax.set_xlim(,)
+# ax.set_ylim(,)
+ax.tick_params(axis = 'both',    #  Применяем параметры к обеим осям
+               which = 'major',    #  Применяем параметры к основным делениям
+               direction = 'inout',    #  Рисуем деления внутри и снаружи графика
+               length = 15,    #  Длинна делений
+               width = 1.5,     #  Ширина делений
+               #color = 'm',    #  Цвет делений
+               pad = 10,    #  Расстояние между черточкой и ее подписью
+               labelsize = 15,    #  Размер подписи
+               #labelcolor = 'r',    #  Цвет подписи
+               bottom = True,    #  Рисуем метки снизу
+               #top = True,    #   сверху
+               left = True,    #  слева
+               #right = True,    #  и справа
+               labelbottom = True,    #  Рисуем подписи снизу
+               #labeltop = True,    #  сверху
+               labelleft = True,    #  слева
+               #labelright = True,    #  и справа
+               #labelrotation = 45)    #  Поворот подписей
+                )
+ax.grid()
+
+#строим данные ---------------------------------
+ax.plot(ox, oy, color='indigo', linewidth=0,
+        marker='D' , markersize=12,
+        label = None)
+
+ax.legend(loc='best', prop={'size': 15})
+plt.savefig('$5.png',bbox_inches='tight')
+plt.show()
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pltplot</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

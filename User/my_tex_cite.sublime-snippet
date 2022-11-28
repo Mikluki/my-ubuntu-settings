@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+\cite{${1:}}
+]]></content>
+  <tabTrigger>cit</tabTrigger>
+  <description>tex cite</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+
+# ---- фиттинг${1:1} ----
+def func${1:1}(x, ${3:k}, ${4:b} $5):
+    return ${2:k*x+b}
+
+
+params, _ = curve_fit(func${1:1}, ox, oy, maxfev=1000)
+${3:k}, ${4:b} $5 = params[0], params[1]
+print(${3:k}, ${4:b} $5)
+
+t = np.linspace(${6:0}, ${7:300})
+plt.plot(t, func${1:1}(t, *params), label="Fit ${2:k*x+b}")
+
+# --- вывод текста${1:1} ---
+textstr = '\n'.join(('fit function: \$y=kx+b\$',
+                     '\$${3:k}=\$' + str(np.round(${3:k},2)),
+                     '\$${4:b}=\$' + str(np.round(${4:b},2))
+                     ))
+
+props = dict(boxstyle='round', facecolor='#dae1e3', alpha=0.7)
+fig.text(0.91, ${8:0.79},
+         textstr, fontsize = 20,
+         color = "black", bbox=props)
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pltfit</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

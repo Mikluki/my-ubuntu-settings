@@ -1,0 +1,6 @@
+// Specify your own settings. You don't need to restart
+{
+    "scale": 1, // control sizes of buttons, file icons, tab ...
+    "widget_scale": 1, // control sizes of clock, weather widget ...
+    "switch_icon_scale": 1, // control the size of switch panel icon
+}

@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+\begin{figure}[h!]
+    \begin{minipage}{.55\linewidth}
+    \includegraphics[width=\linewidth]{${1:pics/name.png}}
+    \caption{${2:fig-caption}}
+    \label{${3:fig-label}}
+    \end{minipage}
+\end{figure}
+]]></content>
+  <tabTrigger>pp</tabTrigger>
+  <description>figure-complex</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

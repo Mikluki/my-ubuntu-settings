@@ -1,0 +1,139 @@
+[custom0]
+binding='<Super>x'
+command='telegram-desktop'
+name='Telegram'
+
+[custom1]
+binding='<Primary><Super>t'
+command='gnome-tweaks'
+name='gnome-tweaks'
+
+[custom10]
+binding='<Super>BackSpace'
+command='nemo /home/mik/Downloads'
+name='nemo /home/mik/Downloads'
+
+[custom11]
+binding='<Super>Escape'
+command='flameshot gui'
+name='flameshot gui'
+
+[custom12]
+binding='<Super>c'
+command='subl -n'
+name='subl'
+
+[custom13]
+binding='<Primary><Super>c'
+command='gnome-calculator'
+name='gnome-calculator'
+
+[custom14]
+binding='<Primary><Super>g'
+command='gnome-calendar'
+name='gnome-calendar'
+
+[custom15]
+binding='<Primary><Super>backslash'
+command='geary'
+name='geary'
+
+[custom16]
+binding='<Primary><Super>slash'
+command='subl -n /home/mik/Pictures/Linux\\ commands'
+name='subl -n /home/mik/Pictures/Linux\\ commands'
+
+[custom17]
+binding='<Super>v'
+command='/home/mik/.local/share/vk/vk'
+name='vk'
+
+[custom18]
+binding='<Primary><Super>0'
+command='brave-browser --app=https://web.whatsapp.com/ --class=WebApp-Whatsapp7370 --user-data-dir=/home/mik/.local/share/ice/profiles/Whatsapp7370'
+name='whatsapp'
+
+[custom2]
+binding='<Primary><Super>f'
+command='firefox'
+name='firefox'
+
+[custom20]
+binding='<Super>m'
+command='/home/mik/Mathpix/Mathpix_Snipping_Tool-x86_64.v03.00.0074.AppImage'
+name='Mathpix'
+
+[custom21]
+binding='<Primary><Super>s'
+command='gnome-control-center sound'
+name='gnome-control-center sound'
+
+[custom22]
+binding='<Shift><Super>s'
+command='nemo /mnt/712793A623DF8B9B/Skoltech'
+name='nemo /mnt/712793A623DF8B9B/Skoltech'
+
+[custom23]
+binding='<Shift><Super>p'
+command='nemo /home/mik/Pictures'
+name='nemo /home/mik/Pictures'
+
+[custom24]
+binding='<Super>slash'
+command='code -n /home/mik/Pictures/Memo/Memo.code-workspace '
+name='VScode memo'
+
+[custom25]
+binding='<Primary><Super>Delete'
+command='systemctl suspend'
+name='systemctl suspend'
+
+[custom26]
+binding='<Primary><Super>apostrophe'
+command='code /home/mik/Documents/Journaling/Life-Journal/code.code-workspace'
+name='journal life'
+
+[custom27]
+binding='<Primary><Super>semicolon'
+command='code /home/mik/Documents/Journaling/Project-journal/lab.code-workspace'
+name='journal Project'
+
+[custom28]
+binding='<Primary><Super>l'
+command='code /home/mik/Downloads/_Apply-stuff/code.code-workspace'
+name='Apply-stuff'
+
+[custom3]
+binding='<Primary><Super>e'
+command='gnome-extensions-app'
+name='gnome-extensions-app'
+
+[custom4]
+binding='<Super>space'
+command='nemo /home/mik/Desktop/2D-Science-MoS2-git'
+name='nemo /home/mik/Desktop/2D-Science-MoS2-git'
+
+[custom5]
+binding='<Super>f'
+command='brave-browser'
+name='brave-browser'
+
+[custom6]
+binding='<Primary><Super>m'
+command='gnome-system-monitor'
+name='gnome-system-monitor'
+
+[custom7]
+binding='<Primary><Super>k'
+command='gnome-control-center keyboard'
+name='gnome-control-center keyboard'
+
+[custom8]
+binding='<Primary><Super>n'
+command='gnome-control-center wifi '
+name='gnome-control-center wifi '
+
+[custom9]
+binding='<Primary><Super>b'
+command='gnome-control-center bluetooth'
+name='gnome-control-center bluetooth'

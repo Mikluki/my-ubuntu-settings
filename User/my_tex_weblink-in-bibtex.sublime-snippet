@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+@misc{${1:},
+    title = {${2:}},
+    howpublishesd = {${3:}}
+},
+
+]]></content>
+  <tabTrigger>misc</tabTrigger>
+  <description>link-article-to-bib</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

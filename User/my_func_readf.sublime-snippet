@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+
+def read_f(name):
+	ox = []
+	oy = []
+	with open(name) as f:
+		data = f.readlines()
+		# print(data)
+
+	for i in range(len(data)):
+		line = data[i].split()
+		ox.append(float(line[0]))
+		oy.append(float(line[1]))
+	return ox,oy
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>readf</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

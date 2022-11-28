@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+
+ox = []
+oy = []
+
+directory = os.getcwd()
+for entry in os.scandir(directory):
+
+    if  (entry.name.endswith('$2')) and entry.is_file():
+
+        with open(entry.name) as f:
+            data1 = f.readlines()[$3].split()[$4]
+            oy.append(float(data1))
+
+            # data2 = entry.name.split(sep='_')[]
+            # ox.append(float(data2))
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>readdir</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

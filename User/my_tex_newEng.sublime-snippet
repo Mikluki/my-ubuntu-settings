@@ -1,0 +1,51 @@
+<snippet>
+  <content><![CDATA[
+\documentclass[12pt,english]{article}
+\linespread{1.5}
+\usepackage{helvet}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\usepackage{babel}
+
+\setcounter{secnumdepth}{5}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+%% Graphics
+\usepackage{graphicx}
+\usepackage{caption}
+
+%% Links
+\usepackage{url}
+\usepackage{hyperref}
+
+%% Custom
+% \numberwithin{equation}{section}
+% \numberwithin{figure}{section}
+
+% ------------------------------------------------------
+\begin{document}
+
+\title{"Who should be given the rcedit for the discovery of carbon nanotubes?"}
+\author{by Lukianov Mikhail}
+\maketitle
+
+Discovery of carbon nanotubes is still a topic of a lively debate.
+}
+
+% -------------------------------------------------------
+
+
+\bibliographystyle{ieeetr}
+\bibliography{lit}
+
+\end{document}
+]]></content>
+  <tabTrigger>newtexEng</tabTrigger>
+  <description>TexEngSimple</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

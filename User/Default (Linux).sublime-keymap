@@ -1,0 +1,58 @@
+[
+	{
+       "keys": ["ctrl+shift+/"],
+       "command": "toggle_terminus_panel",
+       "args" : {
+           "cmd": "zsh",
+           "cwd": "${file_path:${folder}}",
+           "panel_name": "Terminus"
+      	}
+   	},
+	// { "keys": ["ctrl+shift+/"], "command": "toggle_comment", "args": { "block": true } },
+
+	{ "keys" : ["ctrl+alt+c"], "command": "cancel_build"},
+	{ "keys" : ["ctrl+alt+d"], "command": "toggle_menu"},
+	{ "keys" : ["ctrl+alt+s"], "command": "toggle_side_bar"},
+	{ "keys" : ["alt+f"], "command": "expand_selection", "args": {"to": "line"} },
+	{ "keys": ["alt+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"} },
+	{ "keys": ["alt+."], "command": "expand_selection", "args": {"to": "brackets"} },
+	{ "keys": ["alt+/"], "command": "expand_selection", "args": {"to": "scope"} },
+
+	{ "keys": ["ctrl+alt+h"], "command": "show_panel", "args": { "panel": "replace", "in_selection": true } },
+	{ "keys": ["alt+down"], "command": "plus_line", "args": {"lines": 3}},
+	{ "keys": ["alt+up"], "command": "minus_line", "args": {"lines": 3}},
+	{ "keys": ["alt+right"], "command": "run_macro_file", "args": {"file": "res://Packages/User/right.sublime-macro"} },
+	{ "keys": ["alt+left"], "command": "run_macro_file", "args": {"file": "res://Packages/User/left.sublime-macro"} },
+
+	{ "keys": ["ctrl+с"], "command": "copy" },
+	{ "keys": ["ctrl+м"], "command": "paste" },
+	{ "keys": ["ctrl+я"], "command": "undo" },
+	{ "keys": ["ctrl+shift+я"], "command": "redo" },
+	{ "keys": ["ctrl+ф"], "command": "select_all" },
+	{ "keys": ["ctrl+ы"], "command": "save" },
+	{ "keys": ["ctrl+а"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+
+	{ "keys" : ["ctrl+alt+ы"], "command": "toggle_menu"},
+	{ "keys" : ["ctrl+alt+в"], "command": "toggle_side_bar"},
+	{ "keys" : ["alt+а"], "command": "expand_selection", "args": {"to": "line"} },
+	{ "keys": ["alt+в"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"} },
+	{ "keys": ["ctrl+ч"], "command": "cut" },
+	{ "keys": ["ctrl+alt+р"], "command": "show_panel", "args": { "panel": "replace", "in_selection": true } },
+	{ "keys": ["ctrl+."], "command": "toggle_comment", "args": { "block": false } },
+
+	{
+	   "keys": ["alt+1"],
+	   "command": "terminus_open",
+	   "args" : {
+	       "cmd": "bash",
+	       "cwd": "${file_path:${folder}}",
+	       "panel_name": "Terminus"
+	   }
+	}
+	// change pageup-end pagedown-home
+	// { "keys": ["pageup"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	// { "keys": ["pagedown"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	// { "keys": ["home"], "command": "move", "args": {"by": "pages", "forward": false} },
+	// { "keys": ["end"], "command": "move", "args": {"by": "pages", "forward": true} },
+
+]
